@@ -1,95 +1,80 @@
-body {
-    margin: 0;
-    text-align: center;
-    color: #FFFFFF;
+*,
+*::after,
+*::before {
     font-family: 'Inter', sans-serif;
-    background: #1C1C1C;
-}
-
-.container1 {
-    width: 550px;
-    height: 285px;
-    background: #6943FF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 50px;
-    padding: 25px;
+    text-align: center;
     box-sizing: border-box;
-}
-
-.container2 {
-    width: 550px;
-    height: 445px;
-    background: #1F2937;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 25px;
-    box-sizing: border-box;
-    margin: auto;
-    margin-bottom: 50px;
-}
-
-h1 {
-    font-size: 28px;
+    padding: 0;
     margin: 0;
 }
+
+body {
+    height: 100vh;
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    display: flex;
+}
+
+.container { margin: auto; }
+
+header { background-color: #6943FF; }
+main { background-color: #1F2937; }
+
+header,
+main {
+    width: 550px;
+    padding: 35px 25px;
+}
+
+
+h1 { font-size: 28px; }
 
 h2 {
-    font-weight: 600;
     font-size: 20px;
+    font-weight: 600;
     color: #CCC1FF;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
-p {
-    font-size: 14px;
-    margin: 0;
-    margin-top: 10px;
-}
+p { font-size: 14px; }
 
 .unit {
-    background: #273549;
-    width: 100%;
+    background-color: #273549;
     border-top-left-radius: 5px;
-    height: 105px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 25px 10px;
+    margin-bottom: 25px;
 }
 
+.unit:last-child {  margin-bottom: 0; }
+
 #input-el {
-    font-family: 'Inter', sans-serif;
+    width: 150px;
+    background-color: transparent;
     font-weight: 800;
     font-size: 58px;
     color: #FFFFFF;
-    text-align: center;
-    background: none;
+    outline: none;
     border: solid #B295FF 2px;
     border-radius: 5px;
-    width: 150px;
-    height: 85px;
-    margin-top: 30px;
-    margin-bottom: 25px;
+    padding-block: 10px;
+    margin-block: 30px 25px;
     animation-duration: 1s;
-    box-sizing: border-box;
 }
 
 #convert-btn {
-    font-family: 'Inter', sans-serif;
+    display: block;
+    background-color: #FFFFFF;
     font-weight: 500;
     font-size: 16px;
     color: #3D3D3D;
     border: none;
-    background: #FFFFFF;
-    padding: 9px 28px;
     border-radius: 5px;
+    padding: 9px 28px;
+    margin-inline: auto;
+    cursor: pointer;
 }
+
+#convert-btn:active { transform: scale(0.95); }
 
 @keyframes invalid {
   from {border-color: red;}

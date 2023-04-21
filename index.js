@@ -14,12 +14,12 @@ const litersEl = document.querySelector("#liters-el")
 const poundsEl = document.querySelector("#pounds-el")
 const kilosEl = document.querySelector("#kilos-el")
 
-convertBtn.addEventListener("click", function() {
-    let number = Number(inputEl.value)
+convertBtn.addEventListener("click", () => {
+    const number = Number(inputEl.value)
     
     if (!number && number !== 0) {
         inputEl.style.animationName = "invalid"
-        setTimeout(function() {
+        setTimeout(() => {
             inputEl.style.animationName = "none"
         }, 1000)
     } else {
